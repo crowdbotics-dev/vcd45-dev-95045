@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Nbg,Vder
+from .models import Nbg
 admin.site.register(Nbg)
-admin.site.register(Vder)
 
 # Register your models here.

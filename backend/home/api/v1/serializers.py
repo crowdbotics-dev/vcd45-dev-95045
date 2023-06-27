@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Nbg,Vder
+from home.models import Nbg
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,10 +80,4 @@ class NbgSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Nbg
-        fields = "__all__"
-
-class VderSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Vder
         fields = "__all__"
