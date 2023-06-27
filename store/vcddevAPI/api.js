@@ -30,6 +30,24 @@ function api_v1_nbg_destroy(payload) {
 function api_v1_signup_create(payload) {
   return vcddevAPI.post(`/api/v1/signup/`, payload.data)
 }
+function api_v1_vder_list(payload) {
+  return vcddevAPI.get(`/api/v1/vder/`)
+}
+function api_v1_vder_create(payload) {
+  return vcddevAPI.post(`/api/v1/vder/`, payload.data)
+}
+function api_v1_vder_retrieve(payload) {
+  return vcddevAPI.get(`/api/v1/vder/${payload.id}/`)
+}
+function api_v1_vder_update(payload) {
+  return vcddevAPI.put(`/api/v1/vder/${payload.id}/`, payload.data)
+}
+function api_v1_vder_partial_update(payload) {
+  return vcddevAPI.patch(`/api/v1/vder/${payload.id}/`, payload.data)
+}
+function api_v1_vder_destroy(payload) {
+  return vcddevAPI.delete(`/api/v1/vder/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return vcddevAPI.post(`/rest-auth/login/`, payload.data)
 }
@@ -73,6 +91,12 @@ export const apiService = {
   api_v1_nbg_partial_update,
   api_v1_nbg_destroy,
   api_v1_signup_create,
+  api_v1_vder_list,
+  api_v1_vder_create,
+  api_v1_vder_retrieve,
+  api_v1_vder_update,
+  api_v1_vder_partial_update,
+  api_v1_vder_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
