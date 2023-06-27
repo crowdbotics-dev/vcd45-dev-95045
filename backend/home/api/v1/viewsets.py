@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Nbg
-from .serializers import NbgSerializer
+from home.models import Nbg,Vder
+from .serializers import NbgSerializer,VderSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class NbgViewSet(viewsets.ModelViewSet):
     serializer_class = NbgSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Nbg.objects.all()
+
+class VderViewSet(viewsets.ModelViewSet):
+    serializer_class = VderSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Vder.objects.all()
